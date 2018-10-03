@@ -692,12 +692,13 @@
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-Zc-lfn" userLabel="combo ex">
                                 <rect key="frame" x="72" y="49" width="99" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <comboBoxCell key="cell" controlSize="small" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Bitmex" placeholderString="exchange" drawsBackground="YES" numberOfVisibleItems="5" id="Dl1-5e-HIM">
+                                <comboBoxCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Bitmex" placeholderString="exchange" drawsBackground="YES" numberOfVisibleItems="5" id="Dl1-5e-HIM">
                                     <font key="font" size="15" name="AppleBraille-Outline6Dot"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <objectValues>
                                         <string>BitMEX</string>
+                                        <string>Binance</string>
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
@@ -730,6 +731,7 @@
                     </view>
                     <connections>
                         <outlet property="exCombo" destination="gZp-Zc-lfn" id="9sQ-N2-X54"/>
+                        <outlet property="exImage" destination="Yg3-PA-NfA" id="sEv-63-00l"/>
                         <outlet property="pairCombo" destination="6ZU-Pf-bdm" id="CkA-af-IwD"/>
                     </connections>
                 </viewController>

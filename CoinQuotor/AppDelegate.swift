@@ -18,14 +18,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let api = CryptoCompareAPI(applicationName: "MyApp")
     let request = GetSymbolPriceRequest(fsym: "XBTUSD", tsyms: "USD", e: .bitmex)
     
+    
+    var ex: Ex! = nil
     let bitmex = BitMEX()
+    let binance = Binance()
     var quotePair: String?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        self.initEx()
         quotePair = CacheStore.getPair()
         // Insert code here to initialize your application
         if let button = statusItem.button {
-            button.image = NSImage(named: NSImage.Name("bitmex")) // StatusBarButtonImage
+            button.image = NSImage(named: NSImage.Name(ex.name)) // StatusBarButtonImage
             button.imagePosition = .imageLeft
             if quotePair == nil {
                 button.title = "Select a quote pair"
@@ -51,10 +55,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.onUpdate), userInfo: nil, repeats: true)
     }
     
+    private func initEx() {
+        let exName = CacheStore.getExchange()
+        if exName != nil {
+            if exName == "bitmex" {
+                ex = bitmex
+            } else if exName == "binance" {
+                ex = binance
+            }
+        } else {
+            ex = bitmex
+        }
+    }
+    
     @objc func onUpdate() {
         
         if quotePair != nil {
-            bitmex.getLastPrice(pair: quotePair!) { (price, err) in
+            ex.getLastPrice(pair: quotePair!) { (price, err) in
                 if price != nil {
                     DispatchQueue.main.async { // Make sure you're on the main thread here
                         self.statusItem.button?.title = "\(self.quotePair!) - \(price!.avoidNotation)"

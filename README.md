@@ -20,6 +20,7 @@
 |  | Exchange Name | countries |
 | :--- | :--- | :--- |
 | ![bitmex](https://user-images.githubusercontent.com/1294454/27766319-f653c6e6-5ed4-11e7-933d-f0bc3699ae8f.jpg) | BitMEX | Seychelles |
+| ![binance](https://user-images.githubusercontent.com/1294454/29604020-d5483cdc-87ee-11e7-94c7-d1a8d9169293.jpg) | Binance | Japan |
 
 ## Download
 

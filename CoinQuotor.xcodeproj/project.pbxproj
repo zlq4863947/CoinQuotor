@@ -37,12 +37,15 @@
 		55C0C68021625F27003CBFE3 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C67F21625F27003CBFE3 /* EventMonitor.swift */; };
 		55C0C688216271ED003CBFE3 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C687216271ED003CBFE3 /* QuotesViewController.swift */; };
 		55C0C68C2163792A003CBFE3 /* BitMEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C68B2163792A003CBFE3 /* BitMEX.swift */; };
-		55C0C69421637D95003CBFE3 /* BitMEX+Pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69321637D95003CBFE3 /* BitMEX+Pairs.swift */; };
 		55C0C6982163C800003CBFE3 /* BitMEXDataTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */; };
 		55C0C69B2163DD1F003CBFE3 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69A2163DD1F003CBFE3 /* Instrument.swift */; };
 		55C0C69D2163EA25003CBFE3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69C2163EA25003CBFE3 /* APIError.swift */; };
 		55C0C6A121648996003CBFE3 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6A021648996003CBFE3 /* Double.swift */; };
 		55C0C6A421651525003CBFE3 /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6A321651525003CBFE3 /* CacheStore.swift */; };
+		55C0C6A721652A7E003CBFE3 /* Binance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6A621652A7E003CBFE3 /* Binance.swift */; };
+		55C0C6A921652AAE003CBFE3 /* BinanceDataTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6A821652AAE003CBFE3 /* BinanceDataTarget.swift */; };
+		55C0C6AE21652BD9003CBFE3 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6AD21652BD9003CBFE3 /* Symbol.swift */; };
+		55C0C6B0216532F7003CBFE3 /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6AF216532F7003CBFE3 /* Ex.swift */; };
 		A96808C18FB6FDF43A5F66C9 /* Pods_CoinQuotor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,12 +86,15 @@
 		55C0C67F21625F27003CBFE3 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		55C0C687216271ED003CBFE3 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		55C0C68B2163792A003CBFE3 /* BitMEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMEX.swift; sourceTree = "<group>"; };
-		55C0C69321637D95003CBFE3 /* BitMEX+Pairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BitMEX+Pairs.swift"; sourceTree = "<group>"; };
 		55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMEXDataTarget.swift; sourceTree = "<group>"; };
 		55C0C69A2163DD1F003CBFE3 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		55C0C69C2163EA25003CBFE3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		55C0C6A021648996003CBFE3 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		55C0C6A321651525003CBFE3 /* CacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
+		55C0C6A621652A7E003CBFE3 /* Binance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binance.swift; sourceTree = "<group>"; };
+		55C0C6A821652AAE003CBFE3 /* BinanceDataTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceDataTarget.swift; sourceTree = "<group>"; };
+		55C0C6AD21652BD9003CBFE3 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		55C0C6AF216532F7003CBFE3 /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 		8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinQuotor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -207,8 +213,10 @@
 		55C0C6892163024E003CBFE3 /* ExAPI */ = {
 			isa = PBXGroup;
 			children = (
+				55C0C6A521652A1B003CBFE3 /* Binance */,
 				55C0C68A21637800003CBFE3 /* BitMEX */,
 				55C0C69C2163EA25003CBFE3 /* APIError.swift */,
+				55C0C6AF216532F7003CBFE3 /* Ex.swift */,
 			);
 			path = ExAPI;
 			sourceTree = "<group>";
@@ -218,7 +226,6 @@
 			children = (
 				55C0C6992163DCEC003CBFE3 /* Model */,
 				55C0C68B2163792A003CBFE3 /* BitMEX.swift */,
-				55C0C69321637D95003CBFE3 /* BitMEX+Pairs.swift */,
 				55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */,
 			);
 			path = BitMEX;
@@ -238,6 +245,24 @@
 				55C0C6A021648996003CBFE3 /* Double.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55C0C6A521652A1B003CBFE3 /* Binance */ = {
+			isa = PBXGroup;
+			children = (
+				55C0C6AC21652BCA003CBFE3 /* Model */,
+				55C0C6A621652A7E003CBFE3 /* Binance.swift */,
+				55C0C6A821652AAE003CBFE3 /* BinanceDataTarget.swift */,
+			);
+			path = Binance;
+			sourceTree = "<group>";
+		};
+		55C0C6AC21652BCA003CBFE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C0C6AD21652BD9003CBFE3 /* Symbol.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FA2F759E283F6B3756C860CA /* Pods */ = {
@@ -381,7 +406,6 @@
 			files = (
 				55C0C67421625EB9003CBFE3 /* HistoricalDataResponse.swift in Sources */,
 				55C0C67821625EB9003CBFE3 /* GetHistoricalHourlyRequest.swift in Sources */,
-				55C0C69421637D95003CBFE3 /* BitMEX+Pairs.swift in Sources */,
 				55C0C67C21625EB9003CBFE3 /* GetCustomAverageRequest.swift in Sources */,
 				55C0C63F21622D29003CBFE3 /* ViewController.swift in Sources */,
 				55C0C67621625EB9003CBFE3 /* GetHistoricalDailyRequest.swift in Sources */,
@@ -391,13 +415,17 @@
 				55C0C68C2163792A003CBFE3 /* BitMEX.swift in Sources */,
 				55C0C69D2163EA25003CBFE3 /* APIError.swift in Sources */,
 				55C0C69B2163DD1F003CBFE3 /* Instrument.swift in Sources */,
+				55C0C6AE21652BD9003CBFE3 /* Symbol.swift in Sources */,
 				55C0C67021625EB9003CBFE3 /* CustomAverageResponse.swift in Sources */,
 				55C0C6982163C800003CBFE3 /* BitMEXDataTarget.swift in Sources */,
+				55C0C6A721652A7E003CBFE3 /* Binance.swift in Sources */,
 				55C0C67D21625EB9003CBFE3 /* GetSymbolsFullDataRequest.swift in Sources */,
 				55C0C63D21622D29003CBFE3 /* AppDelegate.swift in Sources */,
 				55C0C688216271ED003CBFE3 /* QuotesViewController.swift in Sources */,
 				55C0C68021625F27003CBFE3 /* EventMonitor.swift in Sources */,
 				55C0C66C21625EB9003CBFE3 /* ResponseValidator.swift in Sources */,
+				55C0C6B0216532F7003CBFE3 /* Ex.swift in Sources */,
+				55C0C6A921652AAE003CBFE3 /* BinanceDataTarget.swift in Sources */,
 				55C0C67321625EB9003CBFE3 /* CryptoCompareError.swift in Sources */,
 				55C0C66B21625EB9003CBFE3 /* RequestBuilder.swift in Sources */,
 				55C0C66D21625EB9003CBFE3 /* ValueParameter.swift in Sources */,

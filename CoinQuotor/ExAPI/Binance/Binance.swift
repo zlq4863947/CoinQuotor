@@ -1,8 +1,8 @@
 //
-//  BitMEX.swift
+//  Binance.swift
 //  CoinQuotor
 //
-//  Created by syaku on 2018/10/02.
+//  Created by syaku on 2018/10/04.
 //  Copyright © 2018年 syaku. All rights reserved.
 //
 
@@ -10,17 +10,17 @@ import Foundation
 import Moya
 import RxSwift
 
-class BitMEX: Ex {
+class Binance: Ex {
     override var name: String {
         get {
-            return "bitmex"
+            return "binance"
         }
         set {}
     }
     
-    let provider = MoyaProvider<BitMEXDataTarget>()//(plugins: [NetworkLoggerPlugin(verbose: true)])
+    let provider = MoyaProvider<BinanceDataTarget>()
     
-    private func request(target: BitMEXDataTarget, completed: @escaping (Data?, Error?) -> () ) {
+    private func request(target: BinanceDataTarget, completed: @escaping (Data?, Error?) -> () ) {
         provider.rx.request(target)
             .subscribe({ event in
                 switch event {
@@ -37,8 +37,8 @@ class BitMEX: Ex {
         request(target: .lastPrice(pair: pair)) { (res, err) in
             if res != nil {
                 do {
-                    let instruments = try JSONDecoder().decode([Instrument].self, from: res! )
-                    completed(instruments[0].lastPrice, nil)
+                    let symbol = try JSONDecoder().decode(Ticker.self, from: res! )
+                    completed(Double(symbol.price), nil)
                 } catch {
                     completed(nil, APIError.castError("getLastPrice converting data error!"))
                 }
@@ -52,12 +52,9 @@ class BitMEX: Ex {
         request(target: .pairs()) { (res, err) in
             if res != nil {
                 do {
-                    let instruments = try JSONDecoder().decode([Instrument].self, from: res! )
-                    let pairs = instruments.compactMap { instrument -> String? in
-                        if !instrument.capped {
-                            return instrument.symbol
-                        }
-                        return nil
+                    let res = try JSONDecoder().decode(Symbols.self, from: res! )
+                    let pairs = res.symbols.compactMap { symbol -> String? in
+                        return symbol.symbol
                     }
                     completed(pairs, nil)
                 } catch {
