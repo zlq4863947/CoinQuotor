@@ -14,6 +14,10 @@ class QuotesViewController: NSViewController, NSComboBoxDelegate {
     @IBOutlet weak var exCombo: NSComboBox!
     @IBOutlet weak var pairCombo: NSComboBox!
     
+    @IBAction func exit(_ sender: Any) {
+        NSApplication.shared.terminate(sender)
+    }
+    
     private var appDeleagte: AppDelegate!
     
     override func viewDidLoad() {
@@ -33,6 +37,7 @@ class QuotesViewController: NSViewController, NSComboBoxDelegate {
         let comboBox: NSComboBox = (notification.object as? NSComboBox)!
         if comboBox == self.pairCombo {
             let pair = comboBox.objectValueOfSelectedItem as! String
+            CacheStore.setPair(pair: pair)
             appDeleagte.quotePair = pair
             appDeleagte.onUpdate()
         }

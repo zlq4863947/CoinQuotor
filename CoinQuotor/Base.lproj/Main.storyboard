@@ -686,13 +686,13 @@
             <objects>
                 <viewController storyboardIdentifier="QuotesViewController" id="XfG-lQ-9wD" customClass="QuotesViewController" customModule="CoinQuotor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="358" height="90"/>
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="98"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-Zc-lfn" userLabel="combo ex">
-                                <rect key="frame" x="72" y="41" width="99" height="25"/>
+                                <rect key="frame" x="72" y="49" width="99" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <comboBoxCell key="cell" controlSize="small" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Bitmex" placeholderString="交易所" drawsBackground="YES" numberOfVisibleItems="5" id="Dl1-5e-HIM">
+                                <comboBoxCell key="cell" controlSize="small" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Bitmex" placeholderString="exchange" drawsBackground="YES" numberOfVisibleItems="5" id="Dl1-5e-HIM">
                                     <font key="font" size="15" name="AppleBraille-Outline6Dot"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -702,19 +702,30 @@
                                 </comboBoxCell>
                             </comboBox>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ZU-Pf-bdm" userLabel="combo pair">
-                                <rect key="frame" x="203" y="41" width="99" height="25"/>
+                                <rect key="frame" x="203" y="49" width="99" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <comboBoxCell key="cell" controlSize="small" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="交易对" drawsBackground="YES" numberOfVisibleItems="10" id="jpy-TY-xAV">
+                                <comboBoxCell key="cell" controlSize="small" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="pair" drawsBackground="YES" numberOfVisibleItems="10" id="jpy-TY-xAV">
                                     <font key="font" size="15" name="AppleBraille-Outline6Dot"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
                             </comboBox>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yg3-PA-NfA">
-                                <rect key="frame" x="33" y="37" width="41" height="33"/>
+                                <rect key="frame" x="33" y="45" width="41" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bitmex" id="Q9o-Jv-rvm"/>
                             </imageView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Moi-4n-40a">
+                                <rect key="frame" x="149" y="5" width="62" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="exit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="94O-Uv-y2s">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="exit:" target="XfG-lQ-9wD" id="EWZ-Oi-OkL"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -724,7 +735,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="565"/>
+            <point key="canvasLocation" x="14" y="569"/>
         </scene>
     </scenes>
     <resources>

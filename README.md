@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="160" src="Images/CoinQuotor.png" />
+</p>
+
 # CoinQuotor
 
 ## A menu bar widget for macOS that monitors CryptoCurrency

@@ -22,11 +22,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var quotePair: String?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        quotePair = CacheStore.getPair()
         // Insert code here to initialize your application
         if let button = statusItem.button {
             button.image = NSImage(named: NSImage.Name("bitmex")) // StatusBarButtonImage
             button.imagePosition = .imageLeft
-            button.title = "请选择交易对"
+            if quotePair == nil {
+                button.title = "Select a quote pair"
+            }
             // button.title = "XBTUSD - 6615.0"// EOS - 0.0008947
             button.action = #selector(togglePopover(_:))// #selector(printQuote)
         }

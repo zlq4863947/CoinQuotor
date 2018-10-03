@@ -42,6 +42,7 @@
 		55C0C69B2163DD1F003CBFE3 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69A2163DD1F003CBFE3 /* Instrument.swift */; };
 		55C0C69D2163EA25003CBFE3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69C2163EA25003CBFE3 /* APIError.swift */; };
 		55C0C6A121648996003CBFE3 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6A021648996003CBFE3 /* Double.swift */; };
+		55C0C6A421651525003CBFE3 /* CacheStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6A321651525003CBFE3 /* CacheStore.swift */; };
 		A96808C18FB6FDF43A5F66C9 /* Pods_CoinQuotor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		55C0C69A2163DD1F003CBFE3 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		55C0C69C2163EA25003CBFE3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		55C0C6A021648996003CBFE3 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		55C0C6A321651525003CBFE3 /* CacheStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStore.swift; sourceTree = "<group>"; };
 		8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinQuotor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				55C0C63E21622D29003CBFE3 /* ViewController.swift */,
 				55C0C687216271ED003CBFE3 /* QuotesViewController.swift */,
 				55C0C67F21625F27003CBFE3 /* EventMonitor.swift */,
+				55C0C6A321651525003CBFE3 /* CacheStore.swift */,
 				55C0C64021622D2C003CBFE3 /* Assets.xcassets */,
 				55C0C64221622D2C003CBFE3 /* Main.storyboard */,
 				55C0C64521622D2C003CBFE3 /* Info.plist */,
@@ -347,6 +350,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CoinQuotor/Pods-CoinQuotor-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DefaultsKit/DefaultsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -357,6 +361,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DefaultsKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -405,6 +410,7 @@
 				55C0C67921625EB9003CBFE3 /* GetCoinListRequest.swift in Sources */,
 				55C0C66821625EB9003CBFE3 /* CryptoCompareAPI.swift in Sources */,
 				55C0C66921625EB9003CBFE3 /* HTTPParameter.swift in Sources */,
+				55C0C6A421651525003CBFE3 /* CacheStore.swift in Sources */,
 				55C0C67A21625EB9003CBFE3 /* GetSymbolPriceRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

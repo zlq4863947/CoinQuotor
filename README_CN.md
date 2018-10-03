@@ -1,3 +1,7 @@
+<p align="center">
+  <img height="160" src="Images/CoinQuotor.png" />
+</p>
+
 # CoinQuotor
 
 ## 一个用于监视数字货币的macOS菜单栏小部件
