@@ -20,3 +20,7 @@
 |  | 交易所名称 | 国家 |
 | :--- | :--- | :--- |
 | ![bitmex](https://user-images.githubusercontent.com/1294454/27766319-f653c6e6-5ed4-11e7-933d-f0bc3699ae8f.jpg) | BitMEX | 塞舌尔共和国 |
+
+## 下载
+
+[v1.0.0](https://github.com/zlq4863947/CoinQuotor/releases/download/v1.0.0/CoinQuotor-v1.0.0.pkg)
