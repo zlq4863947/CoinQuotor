@@ -24,4 +24,4 @@
 
 ## Download
 
-[v1.0.0](https://github.com/zlq4863947/CoinQuotor/releases/download/v1.0.0/CoinQuotor-v1.0.0.pkg)
+[v1.1.0](https://github.com/zlq4863947/CoinQuotor/releases/download/v1.1.0/CoinQuotor-v1.1.0.pkg)
