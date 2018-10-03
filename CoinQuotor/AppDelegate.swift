@@ -11,18 +11,22 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let statusItem = NSStatusBar.system.statusItem(withLength: 150)
+    let statusItem = NSStatusBar.system.statusItem(withLength: 170)
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
     var timer: Timer! = nil
     let api = CryptoCompareAPI(applicationName: "MyApp")
     let request = GetSymbolPriceRequest(fsym: "XBTUSD", tsyms: "USD", e: .bitmex)
-
+    
+    let bitmex = BitMEX()
+    var quotePair: String?
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         if let button = statusItem.button {
             button.image = NSImage(named: NSImage.Name("bitmex")) // StatusBarButtonImage
             button.imagePosition = .imageLeft
+            button.title = "请选择交易对"
             // button.title = "XBTUSD - 6615.0"// EOS - 0.0008947
             button.action = #selector(togglePopover(_:))// #selector(printQuote)
         }
@@ -34,24 +38,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 strongSelf.closePopover(sender: event)
             }
         }
-        let bitmex = BitMEX()
-        /*bitmex.getLastPrice(pair: "XBTUSD") { (res, err) in
-            print(res)
-        }*/
         
-        bitmex.getPairs { (res, err) in
-            print(res)
-        }
         // defaultの優先度で非同期処理する
-        /*DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             // データを取得する
             self.onUpdate()
         }
-        // 1秒ごとデータを更新する
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onUpdate), userInfo: nil, repeats: true)*/
+        // 5秒ごとデータを更新する
+        self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.onUpdate), userInfo: nil, repeats: true)
     }
     
     @objc func onUpdate() {
+        
+        if quotePair != nil {
+            bitmex.getLastPrice(pair: quotePair!) { (price, err) in
+                if price != nil {
+                    DispatchQueue.main.async { // Make sure you're on the main thread here
+                        self.statusItem.button?.title = "\(self.quotePair!) - \(price!.avoidNotation)"
+                    }
+                }
+            }
+        }
+        /*
         api.send(request) {
             switch $0 {
             case .success(let prices):
@@ -68,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 // Handle error state
                 print(error.description)
             }
-        }
+        }*/
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

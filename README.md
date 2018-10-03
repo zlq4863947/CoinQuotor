@@ -1,1 +1,18 @@
 # CoinQuotor
+
+## A menu bar widget for macOS that monitors CryptoCurrency
+
+*中文说明的[连接](README_CN.md).*
+
+- Widget
+![Alt text](Images/1.png "widget")
+
+- Select Crypto Currency
+![Alt text](Images/2.png "Select CryptoCurrency")
+
+
+## Supported Cryptocurrency Exchange Markets
+
+|  | Exchange Name | countries |
+| :--- | :--- | :--- |
+| ![bitmex](https://user-images.githubusercontent.com/1294454/27766319-f653c6e6-5ed4-11e7-933d-f0bc3699ae8f.jpg) | BitMEX | Seychelles |

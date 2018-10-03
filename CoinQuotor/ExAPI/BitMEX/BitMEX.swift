@@ -13,7 +13,7 @@ import RxSwift
 let disposeBag = DisposeBag()
 
 class BitMEX {
-    let provider = MoyaProvider<BitMEXDataTarget>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    let provider = MoyaProvider<BitMEXDataTarget>()//(plugins: [NetworkLoggerPlugin(verbose: true)])
     
     private func request(target: BitMEXDataTarget, completed: @escaping (Data?, Error?) -> () ) {
         provider.rx.request(target)

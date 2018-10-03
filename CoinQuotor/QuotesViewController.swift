@@ -7,14 +7,36 @@
 //
 
 import Cocoa
+import AppKit
 
-class QuotesViewController: NSViewController {
+class QuotesViewController: NSViewController, NSComboBoxDelegate {
 
+    @IBOutlet weak var exCombo: NSComboBox!
+    @IBOutlet weak var pairCombo: NSComboBox!
+    
+    private var appDeleagte: AppDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        self.pairCombo.delegate = self
+        
+        appDeleagte = NSApplication.shared.delegate as? AppDelegate
+        appDeleagte.bitmex.getPairs{ (res, err) in
+            if res != nil {
+                self.pairCombo.addItems(withObjectValues: res!)
+            }
+        }
     }
     
+    func comboBoxSelectionDidChange(_ notification: Notification) {
+        let comboBox: NSComboBox = (notification.object as? NSComboBox)!
+        if comboBox == self.pairCombo {
+            let pair = comboBox.objectValueOfSelectedItem as! String
+            appDeleagte.quotePair = pair
+            appDeleagte.onUpdate()
+        }
+    }
 }
 
 extension QuotesViewController {

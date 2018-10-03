@@ -41,6 +41,7 @@
 		55C0C6982163C800003CBFE3 /* BitMEXDataTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */; };
 		55C0C69B2163DD1F003CBFE3 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69A2163DD1F003CBFE3 /* Instrument.swift */; };
 		55C0C69D2163EA25003CBFE3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69C2163EA25003CBFE3 /* APIError.swift */; };
+		55C0C6A121648996003CBFE3 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6A021648996003CBFE3 /* Double.swift */; };
 		A96808C18FB6FDF43A5F66C9 /* Pods_CoinQuotor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMEXDataTarget.swift; sourceTree = "<group>"; };
 		55C0C69A2163DD1F003CBFE3 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		55C0C69C2163EA25003CBFE3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		55C0C6A021648996003CBFE3 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinQuotor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,14 +133,15 @@
 			children = (
 				55C0C6892163024E003CBFE3 /* ExAPI */,
 				55C0C64C21625EB9003CBFE3 /* CryptoCompareAPI */,
+				55C0C6A221649FD3003CBFE3 /* Extensions */,
 				55C0C63C21622D29003CBFE3 /* AppDelegate.swift */,
 				55C0C63E21622D29003CBFE3 /* ViewController.swift */,
+				55C0C687216271ED003CBFE3 /* QuotesViewController.swift */,
+				55C0C67F21625F27003CBFE3 /* EventMonitor.swift */,
 				55C0C64021622D2C003CBFE3 /* Assets.xcassets */,
 				55C0C64221622D2C003CBFE3 /* Main.storyboard */,
 				55C0C64521622D2C003CBFE3 /* Info.plist */,
 				55C0C64621622D2C003CBFE3 /* CoinQuotor.entitlements */,
-				55C0C67F21625F27003CBFE3 /* EventMonitor.swift */,
-				55C0C687216271ED003CBFE3 /* QuotesViewController.swift */,
 			);
 			path = CoinQuotor;
 			sourceTree = "<group>";
@@ -224,6 +227,14 @@
 				55C0C69A2163DD1F003CBFE3 /* Instrument.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		55C0C6A221649FD3003CBFE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55C0C6A021648996003CBFE3 /* Double.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FA2F759E283F6B3756C860CA /* Pods */ = {
@@ -386,6 +397,7 @@
 				55C0C66B21625EB9003CBFE3 /* RequestBuilder.swift in Sources */,
 				55C0C66D21625EB9003CBFE3 /* ValueParameter.swift in Sources */,
 				55C0C66E21625EB9003CBFE3 /* CryptoCompareResponse.swift in Sources */,
+				55C0C6A121648996003CBFE3 /* Double.swift in Sources */,
 				55C0C67B21625EB9003CBFE3 /* GetSymbolsPriceRequest.swift in Sources */,
 				55C0C67521625EB9003CBFE3 /* Exchange.swift in Sources */,
 				55C0C67121625EB9003CBFE3 /* SymbolsFullDataResponse.swift in Sources */,

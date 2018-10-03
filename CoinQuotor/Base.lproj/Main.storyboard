@@ -686,11 +686,11 @@
             <objects>
                 <viewController storyboardIdentifier="QuotesViewController" id="XfG-lQ-9wD" customClass="QuotesViewController" customModule="CoinQuotor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="90"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-Zc-lfn" userLabel="combo ex">
-                                <rect key="frame" x="61" y="216" width="99" height="25"/>
+                                <rect key="frame" x="72" y="41" width="99" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" controlSize="small" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Bitmex" placeholderString="交易所" drawsBackground="YES" numberOfVisibleItems="5" id="Dl1-5e-HIM">
                                     <font key="font" size="15" name="AppleBraille-Outline6Dot"/>
@@ -701,13 +701,8 @@
                                     </objectValues>
                                 </comboBoxCell>
                             </comboBox>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qD-Od-PKe">
-                                <rect key="frame" x="20" y="210" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bitmex" id="7ht-3X-a6v"/>
-                            </imageView>
                             <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ZU-Pf-bdm" userLabel="combo pair">
-                                <rect key="frame" x="176" y="216" width="99" height="25"/>
+                                <rect key="frame" x="203" y="41" width="99" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" controlSize="small" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="交易对" drawsBackground="YES" numberOfVisibleItems="10" id="jpy-TY-xAV">
                                     <font key="font" size="15" name="AppleBraille-Outline6Dot"/>
@@ -715,12 +710,21 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
                             </comboBox>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yg3-PA-NfA">
+                                <rect key="frame" x="33" y="37" width="41" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bitmex" id="Q9o-Jv-rvm"/>
+                            </imageView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="exCombo" destination="gZp-Zc-lfn" id="9sQ-N2-X54"/>
+                        <outlet property="pairCombo" destination="6ZU-Pf-bdm" id="CkA-af-IwD"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="14" y="565"/>
         </scene>
     </scenes>
     <resources>
