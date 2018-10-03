@@ -34,14 +34,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 strongSelf.closePopover(sender: event)
             }
         }
+        let bitmex = BitMEX()
+        /*bitmex.getLastPrice(pair: "XBTUSD") { (res, err) in
+            print(res)
+        }*/
         
+        bitmex.getPairs { (res, err) in
+            print(res)
+        }
         // defaultの優先度で非同期処理する
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
+        /*DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             // データを取得する
             self.onUpdate()
         }
         // 1秒ごとデータを更新する
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onUpdate), userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onUpdate), userInfo: nil, repeats: true)*/
     }
     
     @objc func onUpdate() {

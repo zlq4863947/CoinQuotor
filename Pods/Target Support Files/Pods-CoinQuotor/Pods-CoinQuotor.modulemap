@@ -1,0 +1,6 @@
+framework module Pods_CoinQuotor {
+  umbrella header "Pods-CoinQuotor-umbrella.h"
+
+  export *
+  module * { export * }
+}

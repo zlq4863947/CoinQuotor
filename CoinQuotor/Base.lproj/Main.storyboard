@@ -689,7 +689,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-Zc-lfn">
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-Zc-lfn" userLabel="combo ex">
                                 <rect key="frame" x="61" y="216" width="99" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <comboBoxCell key="cell" controlSize="small" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Bitmex" placeholderString="交易所" drawsBackground="YES" numberOfVisibleItems="5" id="Dl1-5e-HIM">
@@ -706,21 +706,15 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="bitmex" id="7ht-3X-a6v"/>
                             </imageView>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-YE-Piv">
-                                <rect key="frame" x="171" y="216" width="125" height="26"/>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ZU-Pf-bdm" userLabel="combo pair">
+                                <rect key="frame" x="176" y="216" width="99" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="XBTUSD" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="gpF-cX-Y0C" id="idI-P4-5sn">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="15" name=".AppleSystemUIFont"/>
-                                    <menu key="menu" id="hAu-Od-Ddm">
-                                        <items>
-                                            <menuItem title="XBTUSD" state="on" id="gpF-cX-Y0C"/>
-                                            <menuItem title="Item 2" id="lXT-qZ-aTg"/>
-                                            <menuItem title="Item 3" id="hJn-mo-KvK"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                            </popUpButton>
+                                <comboBoxCell key="cell" controlSize="small" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="交易对" drawsBackground="YES" numberOfVisibleItems="10" id="jpy-TY-xAV">
+                                    <font key="font" size="15" name="AppleBraille-Outline6Dot"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                            </comboBox>
                         </subviews>
                     </view>
                 </viewController>

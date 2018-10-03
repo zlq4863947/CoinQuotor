@@ -36,9 +36,17 @@
 		55C0C67E21625EB9003CBFE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55C0C66721625EB9003CBFE3 /* Info.plist */; };
 		55C0C68021625F27003CBFE3 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C67F21625F27003CBFE3 /* EventMonitor.swift */; };
 		55C0C688216271ED003CBFE3 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C687216271ED003CBFE3 /* QuotesViewController.swift */; };
+		55C0C68C2163792A003CBFE3 /* BitMEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C68B2163792A003CBFE3 /* BitMEX.swift */; };
+		55C0C69421637D95003CBFE3 /* BitMEX+Pairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69321637D95003CBFE3 /* BitMEX+Pairs.swift */; };
+		55C0C6982163C800003CBFE3 /* BitMEXDataTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */; };
+		55C0C69B2163DD1F003CBFE3 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69A2163DD1F003CBFE3 /* Instrument.swift */; };
+		55C0C69D2163EA25003CBFE3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C0C69C2163EA25003CBFE3 /* APIError.swift */; };
+		A96808C18FB6FDF43A5F66C9 /* Pods_CoinQuotor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12921594CDC4500091889CE8 /* Pods-CoinQuotor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinQuotor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoinQuotor/Pods-CoinQuotor.debug.xcconfig"; sourceTree = "<group>"; };
+		2556FF5F4AB692AAD222609B /* Pods-CoinQuotor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinQuotor.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoinQuotor/Pods-CoinQuotor.release.xcconfig"; sourceTree = "<group>"; };
 		55C0C63921622D29003CBFE3 /* CoinQuotor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinQuotor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C0C63C21622D29003CBFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C0C63E21622D29003CBFE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,12 @@
 		55C0C66721625EB9003CBFE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55C0C67F21625F27003CBFE3 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		55C0C687216271ED003CBFE3 /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		55C0C68B2163792A003CBFE3 /* BitMEX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMEX.swift; sourceTree = "<group>"; };
+		55C0C69321637D95003CBFE3 /* BitMEX+Pairs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BitMEX+Pairs.swift"; sourceTree = "<group>"; };
+		55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitMEXDataTarget.swift; sourceTree = "<group>"; };
+		55C0C69A2163DD1F003CBFE3 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		55C0C69C2163EA25003CBFE3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinQuotor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +93,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96808C18FB6FDF43A5F66C9 /* Pods_CoinQuotor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E87B64C1D2510695E14D2CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F9D9DA33F124FB02E1629 /* Pods_CoinQuotor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		55C0C63021622D29003CBFE3 = {
 			isa = PBXGroup;
 			children = (
 				55C0C63B21622D29003CBFE3 /* CoinQuotor */,
 				55C0C63A21622D29003CBFE3 /* Products */,
+				FA2F759E283F6B3756C860CA /* Pods */,
+				0E87B64C1D2510695E14D2CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +129,7 @@
 		55C0C63B21622D29003CBFE3 /* CoinQuotor */ = {
 			isa = PBXGroup;
 			children = (
+				55C0C6892163024E003CBFE3 /* ExAPI */,
 				55C0C64C21625EB9003CBFE3 /* CryptoCompareAPI */,
 				55C0C63C21622D29003CBFE3 /* AppDelegate.swift */,
 				55C0C63E21622D29003CBFE3 /* ViewController.swift */,
@@ -172,6 +198,43 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		55C0C6892163024E003CBFE3 /* ExAPI */ = {
+			isa = PBXGroup;
+			children = (
+				55C0C68A21637800003CBFE3 /* BitMEX */,
+				55C0C69C2163EA25003CBFE3 /* APIError.swift */,
+			);
+			path = ExAPI;
+			sourceTree = "<group>";
+		};
+		55C0C68A21637800003CBFE3 /* BitMEX */ = {
+			isa = PBXGroup;
+			children = (
+				55C0C6992163DCEC003CBFE3 /* Model */,
+				55C0C68B2163792A003CBFE3 /* BitMEX.swift */,
+				55C0C69321637D95003CBFE3 /* BitMEX+Pairs.swift */,
+				55C0C6972163C800003CBFE3 /* BitMEXDataTarget.swift */,
+			);
+			path = BitMEX;
+			sourceTree = "<group>";
+		};
+		55C0C6992163DCEC003CBFE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C0C69A2163DD1F003CBFE3 /* Instrument.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA2F759E283F6B3756C860CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12921594CDC4500091889CE8 /* Pods-CoinQuotor.debug.xcconfig */,
+				2556FF5F4AB692AAD222609B /* Pods-CoinQuotor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55C0C64921622D2C003CBFE3 /* Build configuration list for PBXNativeTarget "CoinQuotor" */;
 			buildPhases = (
+				014DA9D4391F1D6C4348ADED /* [CP] Check Pods Manifest.lock */,
 				55C0C63521622D29003CBFE3 /* Sources */,
 				55C0C63621622D29003CBFE3 /* Frameworks */,
 				55C0C63721622D29003CBFE3 /* Resources */,
+				754FEEA0378458FC25AF468F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,6 +303,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		014DA9D4391F1D6C4348ADED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinQuotor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		754FEEA0378458FC25AF468F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CoinQuotor/Pods-CoinQuotor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoinQuotor/Pods-CoinQuotor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55C0C63521622D29003CBFE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -245,13 +365,18 @@
 			files = (
 				55C0C67421625EB9003CBFE3 /* HistoricalDataResponse.swift in Sources */,
 				55C0C67821625EB9003CBFE3 /* GetHistoricalHourlyRequest.swift in Sources */,
+				55C0C69421637D95003CBFE3 /* BitMEX+Pairs.swift in Sources */,
 				55C0C67C21625EB9003CBFE3 /* GetCustomAverageRequest.swift in Sources */,
 				55C0C63F21622D29003CBFE3 /* ViewController.swift in Sources */,
 				55C0C67621625EB9003CBFE3 /* GetHistoricalDailyRequest.swift in Sources */,
 				55C0C66F21625EB9003CBFE3 /* CoinListResponse.swift in Sources */,
 				55C0C67221625EB9003CBFE3 /* APIRequest.swift in Sources */,
 				55C0C66A21625EB9003CBFE3 /* Result.swift in Sources */,
+				55C0C68C2163792A003CBFE3 /* BitMEX.swift in Sources */,
+				55C0C69D2163EA25003CBFE3 /* APIError.swift in Sources */,
+				55C0C69B2163DD1F003CBFE3 /* Instrument.swift in Sources */,
 				55C0C67021625EB9003CBFE3 /* CustomAverageResponse.swift in Sources */,
+				55C0C6982163C800003CBFE3 /* BitMEXDataTarget.swift in Sources */,
 				55C0C67D21625EB9003CBFE3 /* GetSymbolsFullDataRequest.swift in Sources */,
 				55C0C63D21622D29003CBFE3 /* AppDelegate.swift in Sources */,
 				55C0C688216271ED003CBFE3 /* QuotesViewController.swift in Sources */,
@@ -403,10 +528,13 @@
 		};
 		55C0C64A21622D2C003CBFE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12921594CDC4500091889CE8 /* Pods-CoinQuotor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8TG625EMXJ;
 				INFOPLIST_FILE = CoinQuotor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,16 +542,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlq4863947.CoinQuotor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		55C0C64B21622D2C003CBFE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2556FF5F4AB692AAD222609B /* Pods-CoinQuotor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8TG625EMXJ;
 				INFOPLIST_FILE = CoinQuotor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,6 +563,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zlq4863947.CoinQuotor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

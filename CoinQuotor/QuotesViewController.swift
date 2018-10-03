@@ -22,7 +22,6 @@ extension QuotesViewController {
     static func freshController() -> QuotesViewController {
         //1.
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        // let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
         //2.
         let identifier = "QuotesViewController"
         //3.
